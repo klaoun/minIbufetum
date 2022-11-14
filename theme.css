@@ -466,11 +466,11 @@ DIV.thumbHover{ /*only first & last holders are divs*/
 }
 
 .rateButtonStarFull {
-	background: url('icon/rating-stars.gif') no-repeat -16px center; width:16px;
+	background: url('img/rating-stars.gif') no-repeat -16px center; width:16px;
 }
 
 .rateButtonStarEmpty {
-	background: url('icon/rating-stars.gif') no-repeat 0 center; width:16px;
+	background: url('img/rating-stars.gif') no-repeat 0 center; width:16px;
 }
 
 /**
@@ -732,14 +732,14 @@ INPUT[type="radio"], INPUT[type="checkbox"] {
 	font-weight: bold;
 	margin: 5px;
 	border: 1px solid red;
-	background: #ffe1e1 url(icon/errors.png) no-repeat center right;
+	background: #ffe1e1 url(img/errors.png) no-repeat center right;
 	padding: 10px 50px 10px 10px;
 }
 
 /* Informations box */
 .infos {
 	color: #002000;
-	background: #98fb98 url(icon/infos.png) no-repeat center right;
+	background: #98fb98 url(img/infos.png) no-repeat center right;
 	margin: 5px;
 	padding: 10px 50px 10px 10px;
 }
@@ -758,7 +758,7 @@ INPUT[type="radio"], INPUT[type="checkbox"] {
 .header_notes {
 	border: 1px solid #aaa;
 	text-align: center;
-	background-image: url(icon/note.png);
+	background-image: url(img/note.png);
 	background-repeat: no-repeat;
 	background-position: top left;
 	font-weight: bold;
