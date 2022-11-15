@@ -1,6 +1,6 @@
 <?php
 /*
-Theme Name: Ibufetum
+Theme Name: minIbufetum
 Version: auto
 Description: 2ème thème personnalisé de piwigo
 Theme URI:
