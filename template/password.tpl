@@ -26,6 +26,7 @@
     </label>
   </p>
 
+
   <p class="bottomButtons"><input type="submit" name="submit" value="{'Change my password'|@translate}"></p>
   {elseif $action eq 'reset'}
 
