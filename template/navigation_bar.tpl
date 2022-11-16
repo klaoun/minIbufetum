@@ -7,6 +7,7 @@
   <span class="navPrevNext">{'Previous'|@translate} |</span>
   {/if}
 
+
   {assign var='prev_page' value=0}
   {foreach from=$navbar.pages key=page item=url}
     {if $page > $prev_page+1}...{/if}
