@@ -8,6 +8,7 @@
 </div>
 {/if}
 
+
 {if not empty($infos)}
 <div class="infos">
   <ul>
