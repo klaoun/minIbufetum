@@ -21,6 +21,7 @@
         <input tabindex="1" class="login" type="text" name="username" id="username" size="25">
       </li>
 
+
       <li>
         <span class="property">
           <label for="password">{'Password'|@translate}</label>
