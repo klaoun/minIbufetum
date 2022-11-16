@@ -26,6 +26,7 @@
       {/if}
   {assign var='ref_level' value=$cat.LEVEL}
 {/foreach}
+
 {'</li></ul>'|@str_repeat:$ref_level}
 
 	<p class="totalImages">{$block->data.NB_PICTURE|@translate_dec:'%d photo':'%d photos'}</p>
