@@ -4,9 +4,9 @@
   {/if}
 
 {*
-    Please, do not remove this copyright. If you really want to,
-    contact us on http://piwigo.org to find a solution on how
-    to show the origin of the script...
+    Please, do not remove this copyright.
+
+
 *}
 
   {'Powered by'|translate}	<a href="{$PHPWG_URL}" class="Piwigo">Piwigo</a>
