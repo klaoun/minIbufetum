@@ -24,6 +24,7 @@
     <dt>
       <a href="{$U_FEED}">{'Complete RSS feed (photos, comments)'|@translate}</a>
     </dt>
+    
   </dl>
   </div>
 </div>
