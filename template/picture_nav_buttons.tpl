@@ -30,6 +30,7 @@
 		<span class="pwg-icon pwg-icon-repeat-stop"></span><span class="pwg-button-text">{'Not repeat the slideshow'|@translate}</span>
 	</a>
 {/if}
+
 {*<!--{strip}{if isset($first)}
 	<a href="{$first.U_IMG}" title="{'First'|@translate} : {$first.TITLE}" class="pwg-state-default pwg-button">
 		<span class="pwg-icon pwg-icon-arrowstop-w">&nbsp;</span><span class="pwg-button-text">{'First'|@translate}</span>
