@@ -30,6 +30,7 @@
 
 {if $display_mode == 'letters' and isset($letters)}
 <table>
+
 	<tr>
 		<td valign="top">
 	{foreach from=$letters item=letter}
