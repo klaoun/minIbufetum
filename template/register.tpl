@@ -29,6 +29,7 @@
         <input type="password" name="password" id="password" >
       </li>
       <li>
+      
         <span class="property">
           <label for="password_conf">* {'Confirm Password'|@translate}</label>
         </span>
