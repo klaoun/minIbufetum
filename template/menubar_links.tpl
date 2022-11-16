@@ -7,6 +7,7 @@
 				{$link.LABEL}
 				</a>
 			</li>
+			
 		{/foreach}
 	{/strip}</ul>
 </dd>
