@@ -31,6 +31,7 @@
 {combine_script id='thumbnails.loader' path='themes/default/js/thumbnails.loader.js' require='jquery.ajaxmanager' load='footer'}
 {/if}
 <li>
+
 	<span class="wrap1">
 		<span class="wrap2">
 		<a href="{$thumbnail.URL}">
