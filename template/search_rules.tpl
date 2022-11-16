@@ -14,6 +14,7 @@
 
 <ul>
 
+
   {if isset($search_words)}
   {foreach from=$search_words item=v}
   <li>{$v}</li>
