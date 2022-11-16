@@ -22,6 +22,7 @@
 {/foreach}
 {/if}
 
+
 {if !empty($chronology_calendar.calendar_bars)}
 {foreach from=$chronology_calendar.calendar_bars item=bar}
 <div class="calendarCalBar">
