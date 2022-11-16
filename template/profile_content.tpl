@@ -35,6 +35,7 @@
       </li>
     {/if}
     </ul>
+   
   </fieldset>
 
 {if $ALLOW_USER_CUSTOMIZATION}
