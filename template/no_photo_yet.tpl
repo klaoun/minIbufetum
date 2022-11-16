@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<link rel="stylesheet" type="text/css" href="themes/default/theme.css">
+<link rel="stylesheet" type="text/css" href="themes/minIbufetum/theme.css">
 <title>Piwigo, {'Welcome'|@translate}</title>
 {literal}
 <style type="text/css">
