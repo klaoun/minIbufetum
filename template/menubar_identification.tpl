@@ -26,6 +26,7 @@
 {strip}
 	<form method="post" action="{$U_LOGIN}" id="quickconnect">
 	<fieldset>
+	
 	<legend>{'Quick connect'|@translate}</legend>
 	<div>
 	<label for="username">{'Username'|@translate}</label><br>
