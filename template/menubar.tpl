@@ -8,6 +8,7 @@
 		{$block->raw_content}
 		{/if}
 	</dl>
+	
 	{/foreach}
 </div><div id="menuSwitcher"></div>
 {/if}
