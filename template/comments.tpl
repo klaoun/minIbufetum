@@ -32,6 +32,7 @@
 			</li>
 		</ul>
 
+
 		<ul>
 			<li>
 				<label>{'Album'|@translate}</label>
