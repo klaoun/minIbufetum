@@ -24,5 +24,6 @@
   {/if}
   {assign var='ref_level' value=$cat.LEVEL}
 {/foreach}
+
 {'</li></ul>'|@str_repeat:$ref_level}
 </dd>
