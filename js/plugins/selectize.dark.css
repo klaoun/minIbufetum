@@ -22,6 +22,7 @@
   -webkit-box-shadow: inset 0 0 12px 4px #ffffff;
   box-shadow: inset 0 0 12px 4px #ffffff;
 }
+
 .selectize-control.plugin-drag_drop .ui-sortable-placeholder::after {
   content: '!';
   visibility: hidden;
