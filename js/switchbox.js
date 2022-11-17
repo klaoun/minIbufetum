@@ -20,4 +20,5 @@
 	window.SwitchBox = {
 		push: sbFunc
 	}
+	
 })();
