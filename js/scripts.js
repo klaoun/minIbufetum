@@ -1,5 +1,6 @@
 function phpWGOpenWindow(theURL,winName,features)
 {
+	
 	img = new Image();
 	img.src = theURL;
 	if (img.complete)
