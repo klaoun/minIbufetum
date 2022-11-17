@@ -1,5 +1,6 @@
 var gRatingOptions, gRatingButtons, gUserRating;
 
+
 function makeNiceRatingForm(options)
 {
 	gRatingOptions = options;
