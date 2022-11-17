@@ -26,7 +26,7 @@
         .cboxIframe{background:#fff;}
         #cboxError{padding:50px; border:1px solid #ccc;}
         #cboxLoadedContent{background:#f1f1f1; padding:1px;}
-        #cboxLoadingGraphic{background:url(images/loading.gif) no-repeat center center;}
+        #cboxLoadingGraphic{background:url(themes/minIbufetum/img/loading.gif) no-repeat center center;}
         #cboxLoadingOverlay{background:#000;}
         #cboxTitle{position:absolute; top:-22px; left:0; color:#fff;}
         #cboxCurrent{position:absolute; top:-22px; right:205px; text-indent:-9999px;}
