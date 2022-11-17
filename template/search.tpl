@@ -1,5 +1,5 @@
-{combine_script id='jquery.selectize' load='footer' path='themes/default/js/plugins/selectize.min.js'}
-{combine_css id='jquery.selectize' path="themes/default/js/plugins/selectize.{$themeconf.colorscheme}.css"}
+{combine_script id='jquery.selectize' load='footer' path='themes/minIbufetum/js/plugins/selectize.min.js'}
+{combine_css id='jquery.selectize' path="themes/minIbufetum/js/plugins/selectize.{$themeconf.colorscheme}.css"}
 
 {footer_script}
 jQuery(document).ready(function() {
@@ -17,7 +17,7 @@ jQuery(document).ready(function() {
 
 	<div class="titrePage">
 		<ul class="categoryActions">
-			{combine_script id='core.scripts' load='async' path='themes/default/js/scripts.js'}
+			{combine_script id='core.scripts' load='async' path='themes/minIbufetum/js/scripts.js'}
 			<li><a href="{$U_HELP}" onclick="popuphelp(this.href); return false;" title="{'Help'|@translate}" class="pwg-state-default pwg-button">
 				<span class="pwg-icon pwg-icon-help"></span><span class="pwg-button-text">{'Help'|@translate}</span>
 			</a></li>
