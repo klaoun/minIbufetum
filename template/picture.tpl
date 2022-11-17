@@ -1,4 +1,4 @@
-{combine_script id='core.switchbox' load='async' require='jquery' path='themes/default/js/switchbox.js'}
+{combine_script id='core.switchbox' load='async' require='jquery' path='themes/minIbufetum/js/switchbox.js'}
 {if isset($MENUBAR)}{$MENUBAR}{/if}
 <div id="content"{if isset($MENUBAR)} class="contentWithMenu"{/if}>
 
@@ -48,7 +48,7 @@ function changeImgSrc(url,typeSave,typeMap)
   </a><br>
   {/foreach}
   {if isset($U_ORIGINAL)}
-    {combine_script id='core.scripts' load='async' path='themes/default/js/scripts.js'}
+    {combine_script id='core.scripts' load='async' path='themes/minIbufetum/js/scripts.js'}
   <a href="javascript:phpWGOpenWindow('{$U_ORIGINAL}','xxx','scrollbars=yes,toolbar=no,status=no,resizable=yes')" rel="nofollow">{'Original'|@translate}</a>
   {/if}
 </div>
