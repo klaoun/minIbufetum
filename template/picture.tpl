@@ -262,8 +262,8 @@ y.callService(
 				<input type="submit" name="rate" value="{$mark}" class="rateButton" title="{$mark}">
 			{/if}
 			{/foreach}
-			{strip}{combine_script id='core.scripts' load='async' path='themes/default/js/scripts.js'}
-			{combine_script id='rating' load='async' require='core.scripts' path='themes/default/js/rating.js'}
+			{strip}{combine_script id='core.scripts' load='async' path='themes/minIbufetum/js/scripts.js'}
+			{combine_script id='rating' load='async' require='core.scripts' path='themes/minIbufetum/js/rating.js'}
 			{footer_script}
 				var _pwgRatingAutoQueue = _pwgRatingAutoQueue||[];
 				_pwgRatingAutoQueue.push( {ldelim}rootUrl: '{$ROOT_URL}', image_id: {$current.id},
@@ -296,7 +296,7 @@ y.callService(
 			<div>
 				<a id="privacyLevelLink" href>{$available_permission_levels[$current.level]}</a>
 			</div>
-{combine_script id='core.scripts' load='async' path='themes/default/js/scripts.js'}
+{combine_script id='core.scripts' load='async' path='themes/minIbufetum/js/scripts.js'}
 {footer_script require='jquery'}{strip}
 function setPrivacyLevel(id, level){
 (new PwgWS('{$ROOT_URL}')).callService(
