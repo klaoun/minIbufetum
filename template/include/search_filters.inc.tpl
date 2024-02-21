@@ -1,13 +1,10 @@
-{combine_script id='jquery.selectize' load='footer' path='themes/minibufetum/js/plugins/selectize.min.js'}
+{combine_script id='jquery.selectize' load='footer' path='themes/minIbufetum/js/plugins/selectize.min.js'}
 {combine_css path="admin/themes/default/fontello/css/animation.css" order=10} {* order 10 is required, see issue 1080 *}
 {combine_script id='jquery.tipTip' load='header' path='themes/minIbufetum/js/plugins/jquery.tipTip.minified.js'}
 {combine_css path="themes/minIbufetum/css/search.css" order=-100}
 {combine_css path="themes/minIbufetum/css/{$themeconf.colorscheme}-search.css" order=-100}
 {combine_css path="themes/minIbufetum/css/gallery-icon.css" order=-10} 
-  
-  
-  
-  
+    
 {footer_script}
 {if isset($GP)}
   global_params = {$GP};
@@ -33,145 +30,10 @@ str_empty_search_bot_alt = "{'Pre-established filters are proposed, but you can 
 
 const prefix_icon = 'gallery-icon-';
 {/footer_script}
-  
-  
-  
-  
-  {combine_script id='mcs' load='async' require='jquery' path='themes/minIbufetum/js/mcs.js'}
-  
-  
-  
-  
-  
-  title={'Search in albums'|@translate}
-    searchPlaceholder={'Search'|@translate}
-    show_root_btn=false
-    api_method='pwg.categories.getList'
-  }
-  {if isset($AUTHORS)}
-  <div class="filter filter-authors">
-    <span class="mcs-icon gallery-icon-user-edit filter-icon"></span>
-    <span class="search-words"></span>
-    <span class="filter-arrow gallery-icon-up-open"></span>
-    
-    <div class="filter-form filter-author-form">
-      <div class="filter-form-title gallery-icon-user-edit"> {'Author'|@translate}</div>
-      <div class="filter-actions"> 
-        <span class="delete mcs-icon gallery-icon-trash">{'Delete'|@translate}</span>
-        <span class="clear mcs-icon gallery-icon-arrow-rotate-left">{'Clear'|@translate}</span>
-      </div>
-      <div class="form-container">
-        <select id="authors" placeholder="{'Type in a search term'|translate}" name="authors[]" multiple>
-        {foreach from=$AUTHORS item=author}
-          <option value="{$author.author|strip_tags:false|escape:html}">{$author.author|strip_tags:false} ({$author.counter|translate_dec:'%d photo':'%d photos'})</option>
-        {/foreach}
-        </select>
 
-        <div class="filter-validate">
-          <i class="loading gallery-icon-spin6 animate-spin"></i>
-          <span class="validate-text">{'Validate'|@translate}</span>
-        </div>
-      </div>
-    </div>
-  </div>
-  {/if}
+{combine_script id='mcs' load='async' require='jquery' path='themes/minIbufetum/js/mcs.js'}
 
-  {if isset($ADDED_BY)}
-  <div class="filter filter-added_by">
-    <span class="mcs-icon gallery-icon-user filter-icon"></span>
-    </span><span class="search-words"></span>
-    <span class="filter-arrow gallery-icon-up-open"></span>
-
-    <div class="filter-form filter-added_by-form">
-      <div class="filter-form-title gallery-icon-user">{'Added by'|translate}</div>
-      <div class="filter-actions"> 
-        <span class="delete mcs-icon gallery-icon-trash tiptip" title="{'Delete'|@translate}"></span>
-        <span class="clear mcs-icon gallery-icon-arrow-rotate-left tiptip" title="{'Clear'|@translate}"></span>
-      </div>
-
-      <div class="form-container">
-        <div class="added_by-option-container">
-        {foreach from=$ADDED_BY item=added_by key=k}
-          <div class="added_by-option">
-              <input type="checkbox" id="added_by-{$added_by.added_by_id}" name="{$added_by.added_by_id}">
-              <label for="added_by-{$added_by.added_by_id}">
-                <span class="mcs-icon gallery-icon-checkmark checked-icon"></span>
-                <span class="added_by-name">{$added_by.added_by_name|strip_tags:false}</span>
-                <span class="added_by-badge">{$added_by.counter}</span>
-              </label>
-            </div>
-        {/foreach}
-        </div>
-      </div>
-      <div class="filter-validate">
-        <i class="loading gallery-icon-spin6 animate-spin"></i>
-        <span class="validate-text">{'Validate'|@translate}</span>
-      </div>
-    </div>
-  </div>
-  {/if}
-
-  {if isset($FILETYPES)}
-  <div class="filter filter-filetypes">
-    <span class="mcs-icon gallery-icon-file-image filter-icon"></span>
-    </span><span class="search-words"></span>
-    <span class="filter-arrow gallery-icon-up-open"></span>
-
-    <div class="filter-form filter-filetypes-form">
-      <div class="filter-form-title gallery-icon-file-image">{'File type'|@translate}</div>
-      <div class="filter-actions"> 
-        <span class="delete mcs-icon gallery-icon-trash tiptip" title="{'Delete'|@translate}"></span>
-        <span class="clear mcs-icon gallery-icon-arrow-rotate-left tiptip" title="{'Clear'|@translate}"></span>
-      </div>
-      <div class="form-container">
-        <div class="filetypes-option-container">
-        {foreach from=$FILETYPES item=filetypes key=k}
-          <div class="filetypes-option">
-              <input type="checkbox" id="filetype-{$k}" name="{$k}">
-              <label for="filetype-{$k}">
-                <span class="mcs-icon gallery-icon-checkmark checked-icon"></span>
-                <span class="ext-name">{$k}</span>
-                <span class="ext-badge">{$filetypes}</span>
-              </label>
-            </div>
-        {/foreach}
-        </div>
-      </div>
-      <div class="filter-validate">
-        <i class="loading gallery-icon-spin6 animate-spin"></i>
-        <span class="validate-text">{'Validate'|@translate}</span>
-      </div>
-    </div>
-  </div>
-  {/if}
-  <div>
-    <span class="mcs-icon gallery-icon-arrow-rotate-left clear-all">{'Empty filters'|@translate}</span>
-  </div>
-</div>
-
-{if isset($TAGS_FOUND) or isset($ALBUMS_FOUND)}
-<div class="mcs-side-results">
-  {if isset($TAGS_FOUND)}
-  <div class="mcs-tags-found">
-    <span class="mcs-side-badge">{count($TAGS_FOUND)}</span>
-    <p>{'Tags found'|@translate}</p>
-  </div>
-  {/if}
-  {if isset($ALBUMS_FOUND)}
-  <div class="mcs-albums-found">
-    <span class="mcs-side-badge">{count($ALBUMS_FOUND)}</span>
-    <p>{'Albums found'|@translate}</p>
-  </div>
-  {/if}
-</div>
-
-  {if isset($TAGS_FOUND)}
-<div class="tags-found-popin">
-  <div class="tags-found-popin-container">
-    <span class="gallery-icon-cancel tags-found-close"></span>
-    <div class="mcs-popin-title">{'Tags found'|@translate}</div>
-    
-<div class="mcs-container">
+  <div class="mcs-container">
   <div class="filter-manager-popin">
     <div class="filter-manager-popin-container">
       <span class="gallery-icon-cancel filter-manager-close"></span>
@@ -381,13 +243,135 @@ const prefix_icon = 'gallery-icon-';
     </div>
   </div>
 
-
-    
       {include file='admin/themes/default/template/include/album_selector.inc.tpl' 
 
+  title={'Search in albums'|@translate}
+    searchPlaceholder={'Search'|@translate}
+    show_root_btn=false
+    api_method='pwg.categories.getList'
+  }
+  {if isset($AUTHORS)}
+  <div class="filter filter-authors">
+    <span class="mcs-icon gallery-icon-user-edit filter-icon"></span>
+    <span class="search-words"></span>
+    <span class="filter-arrow gallery-icon-up-open"></span>
+    
+    <div class="filter-form filter-author-form">
+      <div class="filter-form-title gallery-icon-user-edit"> {'Author'|@translate}</div>
+      <div class="filter-actions"> 
+        <span class="delete mcs-icon gallery-icon-trash">{'Delete'|@translate}</span>
+        <span class="clear mcs-icon gallery-icon-arrow-rotate-left">{'Clear'|@translate}</span>
+      </div>
+      <div class="form-container">
+        <select id="authors" placeholder="{'Type in a search term'|translate}" name="authors[]" multiple>
+        {foreach from=$AUTHORS item=author}
+          <option value="{$author.author|strip_tags:false|escape:html}">{$author.author|strip_tags:false} ({$author.counter|translate_dec:'%d photo':'%d photos'})</option>
+        {/foreach}
+        </select>
 
+        <div class="filter-validate">
+          <i class="loading gallery-icon-spin6 animate-spin"></i>
+          <span class="validate-text">{'Validate'|@translate}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  {/if}
 
-      
+  {if isset($ADDED_BY)}
+  <div class="filter filter-added_by">
+    <span class="mcs-icon gallery-icon-user filter-icon"></span>
+    </span><span class="search-words"></span>
+    <span class="filter-arrow gallery-icon-up-open"></span>
+
+    <div class="filter-form filter-added_by-form">
+      <div class="filter-form-title gallery-icon-user">{'Added by'|translate}</div>
+      <div class="filter-actions"> 
+        <span class="delete mcs-icon gallery-icon-trash tiptip" title="{'Delete'|@translate}"></span>
+        <span class="clear mcs-icon gallery-icon-arrow-rotate-left tiptip" title="{'Clear'|@translate}"></span>
+      </div>
+
+      <div class="form-container">
+        <div class="added_by-option-container">
+        {foreach from=$ADDED_BY item=added_by key=k}
+          <div class="added_by-option">
+              <input type="checkbox" id="added_by-{$added_by.added_by_id}" name="{$added_by.added_by_id}">
+              <label for="added_by-{$added_by.added_by_id}">
+                <span class="mcs-icon gallery-icon-checkmark checked-icon"></span>
+                <span class="added_by-name">{$added_by.added_by_name|strip_tags:false}</span>
+                <span class="added_by-badge">{$added_by.counter}</span>
+              </label>
+            </div>
+        {/foreach}
+        </div>
+      </div>
+      <div class="filter-validate">
+        <i class="loading gallery-icon-spin6 animate-spin"></i>
+        <span class="validate-text">{'Validate'|@translate}</span>
+      </div>
+    </div>
+  </div>
+  {/if}
+
+  {if isset($FILETYPES)}
+  <div class="filter filter-filetypes">
+    <span class="mcs-icon gallery-icon-file-image filter-icon"></span>
+    </span><span class="search-words"></span>
+    <span class="filter-arrow gallery-icon-up-open"></span>
+
+    <div class="filter-form filter-filetypes-form">
+      <div class="filter-form-title gallery-icon-file-image">{'File type'|@translate}</div>
+      <div class="filter-actions"> 
+        <span class="delete mcs-icon gallery-icon-trash tiptip" title="{'Delete'|@translate}"></span>
+        <span class="clear mcs-icon gallery-icon-arrow-rotate-left tiptip" title="{'Clear'|@translate}"></span>
+      </div>
+      <div class="form-container">
+        <div class="filetypes-option-container">
+        {foreach from=$FILETYPES item=filetypes key=k}
+          <div class="filetypes-option">
+              <input type="checkbox" id="filetype-{$k}" name="{$k}">
+              <label for="filetype-{$k}">
+                <span class="mcs-icon gallery-icon-checkmark checked-icon"></span>
+                <span class="ext-name">{$k}</span>
+                <span class="ext-badge">{$filetypes}</span>
+              </label>
+            </div>
+        {/foreach}
+        </div>
+      </div>
+      <div class="filter-validate">
+        <i class="loading gallery-icon-spin6 animate-spin"></i>
+        <span class="validate-text">{'Validate'|@translate}</span>
+      </div>
+    </div>
+  </div>
+  {/if}
+  <div>
+    <span class="mcs-icon gallery-icon-arrow-rotate-left clear-all">{'Empty filters'|@translate}</span>
+  </div>
+</div>
+
+{if isset($TAGS_FOUND) or isset($ALBUMS_FOUND)}
+<div class="mcs-side-results">
+  {if isset($TAGS_FOUND)}
+  <div class="mcs-tags-found">
+    <span class="mcs-side-badge">{count($TAGS_FOUND)}</span>
+    <p>{'Tags found'|@translate}</p>
+  </div>
+  {/if}
+  {if isset($ALBUMS_FOUND)}
+  <div class="mcs-albums-found">
+    <span class="mcs-side-badge">{count($ALBUMS_FOUND)}</span>
+    <p>{'Albums found'|@translate}</p>
+  </div>
+  {/if}
+</div>
+
+  {if isset($TAGS_FOUND)}
+<div class="tags-found-popin">
+  <div class="tags-found-popin-container">
+    <span class="gallery-icon-cancel tags-found-close"></span>
+    <div class="mcs-popin-title">{'Tags found'|@translate}</div>
     <div class="mcs-popin-desc">{'Tags listed here match your search by word. Click on one to browse by tag.'|translate}</div>
     <div class="tags-found-container">
     {foreach from=$TAGS_FOUND item=tag_path key=k}
