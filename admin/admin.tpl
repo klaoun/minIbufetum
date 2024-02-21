@@ -3,7 +3,7 @@
 </div>
 <div id="configContent" style="margin: 0 auto; max-width: 420px">
     <h3>{'minIbufetum'|@translate}</h3>
-    <h4>{'Version'|@translate}: 13.2.0</h4>
+    <h4>{'Version'|@translate}: 14.2.0</h4>
     <h5>{'By'|@translate}: <a href="https://github.com/klaoun/minIbufetum">klaoun</a></h5>
     <p>{'A mobile-ready theme based on default'|@translate}</p>
     <p>{'Documentation'|@translate}: <a href="https://github.com/klaoun/minIbufetum/wiki" target="_blank">https://github.com/klaoun/minIbufetum/wiki</a></p>
