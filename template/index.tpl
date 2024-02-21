@@ -12,6 +12,12 @@
 <div id="content" class="content{if isset($MENUBAR)} contentWithMenu{/if}">
 <div class="titrePage{if isset($chronology.TITLE)} calendarTitleBar{/if}">
 	<ul class="categoryActions">
+{if isset($SEARCH_IN_SET_ACTION) and $SEARCH_IN_SET_ACTION}
+	  {combine_css path="themes/minIbufetum/css/gallery-icon.css" order=-10}
+    <li id="cmdSearchInSet"><a href="{$SEARCH_IN_SET_URL}" title="{'Search in this set'|translate}" class="pwg-state-default pwg-button">
+      <span class="gallery-icon-search-folder"></span><span class="pwg-button-text">{'Search in this set'|translate}</span>
+    </a></li>
+{/if}
 {if !empty($image_orders)}
 		<li>{strip}<a id="sortOrderLink" title="{'Sort order'|@translate}" class="pwg-state-default pwg-button" rel="nofollow">
 			<span class="pwg-icon pwg-icon-sort"></span><span class="pwg-button-text">{'Sort order'|@translate}</span>
